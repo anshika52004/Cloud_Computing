@@ -1,0 +1,17 @@
+chmod 400 static.pem
+ssh -i static.pem ubuntu@13.53.38.20
+
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+cd /var/www/html
+sudo rm index.html
+sudo nano index.html
+
+sudo systemctl restart apache2
+
+
+
+URL: http://
